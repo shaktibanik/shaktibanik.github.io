@@ -1,26 +1,403 @@
+/* ------------------------------
+   BASIC SETTINGS
+------------------------------ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  max-width: 1100px;
+  color: #18212b;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+
+/* ------------------------------
+   PAGE WIDTH
+------------------------------ */
+
+.container {
+  width: min(1120px, 90%);
   margin: 0 auto;
-  padding: 60px 30px;
-  color: #222222;
-  background-color: #ffffff;
 }
 
-h1 {
-  font-size: 52px;
-  margin-bottom: 10px;
-  color: #16324f;
+
+/* ------------------------------
+   NAVIGATION
+------------------------------ */
+
+.site-header {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e7ebef;
 }
 
-h2 {
-  font-size: 24px;
+.nav-container {
+  min-height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-name {
+  color: #162f4d;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+}
+
+.nav-links a {
+  color: #485664;
+  text-decoration: none;
+  font-size: 15px;
   font-weight: 500;
-  margin-bottom: 12px;
 }
 
-p {
+.nav-links a:hover {
+  color: #1769aa;
+}
+
+
+/* ------------------------------
+   HERO
+------------------------------ */
+
+.hero {
+  padding: 95px 0 100px;
+}
+
+.hero-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(260px, 0.7fr);
+
+  gap: 85px;
+  align-items: center;
+}
+
+
+/* Small line above name */
+
+.eyebrow {
+  margin: 0 0 18px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #5d6b78;
+}
+
+
+/* Main name */
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 6vw, 72px);
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  color: #142d4c;
+}
+
+
+/* Research identity */
+
+.hero h2 {
+  margin: 22px 0 22px;
+
+  max-width: 680px;
+
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.25;
+
+  font-weight: 500;
+
+  color: #24384d;
+}
+
+
+/* Intro paragraph */
+
+.hero-description {
+  max-width: 680px;
+
+  margin: 0;
+
   font-size: 18px;
-  line-height: 1.7;
-  max-width: 800px;
+  line-height: 1.75;
+
+  color: #56616c;
+}
+
+
+/* ------------------------------
+   BUTTONS
+------------------------------ */
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 34px;
+}
+
+.button {
+  display: inline-block;
+
+  padding: 12px 21px;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.primary-button {
+  background: #1769aa;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #12578f;
+}
+
+.secondary-button {
+  color: #1769aa;
+
+  background: white;
+
+  border: 1px solid #cbd6df;
+}
+
+.secondary-button:hover {
+  background: #f5f8fa;
+}
+
+
+/* ------------------------------
+   RESEARCH KEYWORDS
+------------------------------ */
+
+.research-tags {
+  margin-top: 29px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.research-tags span {
+  padding: 6px 12px;
+
+  background: #f2f6f9;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  color: #455665;
+}
+
+
+/* ------------------------------
+   PROFILE PHOTO
+------------------------------ */
+
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 330px;
+
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 18px 45px rgba(32, 48, 64, 0.14);
+}
+
+
+/* ------------------------------
+   GENERAL SECTIONS
+------------------------------ */
+
+.section {
+  padding: 95px 0;
+
+  border-top: 1px solid #eef1f3;
+}
+
+.light-section {
+  background: #f7f9fb;
+}
+
+.section-label {
+  margin: 0 0 10px;
+
+  color: #1769aa;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.section-title {
+  margin: 0;
+
+  color: #162f4d;
+
+  font-size: 34px;
+  line-height: 1.25;
+}
+
+.section-intro {
+  max-width: 720px;
+
+  margin-top: 20px;
+
+  color: #5d6873;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+footer {
+  border-top: 1px solid #e7ebef;
+
+  padding: 30px 0;
+}
+
+.footer-content {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  color: #68747f;
+
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #52616e;
+
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #1769aa;
+}
+
+
+/* ------------------------------
+   MOBILE
+------------------------------ */
+
+@media (max-width: 760px) {
+
+  .nav-container {
+    min-height: 65px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+
+  .hero {
+    padding: 65px 0 75px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .hero-image-wrapper {
+    order: -1;
+  }
+
+  .profile-image {
+    max-width: 250px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+
+    letter-spacing: -1px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
+
+
+  .section {
+    padding: 70px 0;
+  }
+
+
+  .footer-content {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
 }
