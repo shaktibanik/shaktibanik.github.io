@@ -373,26 +373,56 @@ body {
 .hero-image-wrapper {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
 }
 
 
-.profile-image {
-  width: 100%;
+.profile-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  max-width: 325px;
+  gap: 12px;
 
-  aspect-ratio: 4 / 5;
+  margin-top: 20px;
+}
 
-  object-fit: cover;
 
-  border-radius: 12px;
+.profile-icon {
+  width: 42px;
+  height: 42px;
 
-  box-shadow:
-    0 18px 45px
-    rgba(32, 48, 64, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #d8e1e8;
+  border-radius: 50%;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.profile-icon img {
+  width: 20px;
+  height: 20px;
+
+  object-fit: contain;
+}
+
+
+.profile-icon:hover {
+  transform: translateY(-3px);
+
+  border-color: #b5c9d8;
+
+  box-shadow: 0 6px 16px rgba(32, 48, 64, 0.12);
 }
 
 /* ==================================
