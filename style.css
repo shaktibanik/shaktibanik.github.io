@@ -1,6 +1,6 @@
-/* ------------------------------
+/* ==================================
    BASIC SETTINGS
------------------------------- */
+================================== */
 
 * {
   box-sizing: border-box;
@@ -12,94 +12,127 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   color: #18212b;
+
   background: #ffffff;
+
   line-height: 1.6;
 }
 
 
-/* ------------------------------
+/* ==================================
    PAGE WIDTH
------------------------------- */
+================================== */
 
 .container {
   width: min(1120px, 90%);
+
   margin: 0 auto;
 }
 
 
-/* ------------------------------
+/* ==================================
    NAVIGATION
------------------------------- */
+================================== */
 
 .site-header {
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.97);
+
   border-bottom: 1px solid #e7ebef;
 }
+
 
 .nav-container {
   min-height: 76px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 }
 
+
 .site-name {
   color: #162f4d;
+
   text-decoration: none;
+
   font-size: 21px;
+
   font-weight: 700;
 }
 
+
 .nav-links {
   display: flex;
-  gap: 34px;
+
+  gap: 32px;
 }
+
 
 .nav-links a {
   color: #485664;
+
   text-decoration: none;
+
   font-size: 15px;
+
   font-weight: 500;
+
+  transition: color 0.2s ease;
 }
+
 
 .nav-links a:hover {
   color: #1769aa;
 }
 
 
-/* ------------------------------
+
+/* ==================================
    HERO
------------------------------- */
+================================== */
 
 .hero {
-  padding: 95px 0 100px;
+  padding: 85px 0 70px;
 }
+
 
 .hero-grid {
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1.5fr)
+    minmax(0, 1.55fr)
     minmax(260px, 0.7fr);
 
-  gap: 85px;
+  gap: 80px;
+
   align-items: center;
 }
 
 
-/* Small line above name */
 
-.eyebrow {
-  margin: 0 0 18px;
+/* Student identity */
 
-  font-size: 15px;
-  font-weight: 600;
+.student-label {
+  margin: 0 0 15px;
 
-  color: #5d6b78;
+  color: #1769aa;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
 }
+
 
 
 /* Main name */
@@ -107,138 +140,247 @@ body {
 .hero h1 {
   margin: 0;
 
-  font-size: clamp(48px, 6vw, 72px);
+  color: #142d4c;
+
+  font-size: clamp(48px, 6vw, 70px);
+
   line-height: 1.05;
 
   letter-spacing: -2px;
-
-  color: #142d4c;
 }
 
 
-/* Research identity */
 
-.hero h2 {
-  margin: 22px 0 22px;
+/* Graduate Researcher / TA */
 
-  max-width: 680px;
+.role {
+  margin: 22px 0 2px;
 
-  font-size: clamp(24px, 3vw, 34px);
-  line-height: 1.25;
+  color: #263c52;
 
-  font-weight: 500;
+  font-size: 22px;
 
-  color: #24384d;
+  font-weight: 600;
 }
 
 
-/* Intro paragraph */
 
-.hero-description {
-  max-width: 680px;
+/* University */
 
+.institution {
   margin: 0;
 
-  font-size: 18px;
-  line-height: 1.75;
+  color: #66727e;
 
-  color: #56616c;
+  font-size: 17px;
 }
 
 
-/* ------------------------------
+
+/* ==================================
+   LAB AFFILIATION
+================================== */
+
+.lab-affiliation {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 20px;
+
+  padding: 9px 14px;
+
+  background: #f3f7fa;
+
+  border: 1px solid #e3ebf1;
+
+  border-radius: 7px;
+
+  color: #465969;
+
+  font-size: 14px;
+}
+
+
+.lab-dot {
+  flex-shrink: 0;
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #1769aa;
+}
+
+
+.separator {
+  margin: 0 5px;
+
+  color: #9aa8b5;
+}
+
+
+
+/* ==================================
+   CURRENT RESEARCH
+================================== */
+
+.research-focus {
+  margin: 28px 0 0;
+
+  color: #65717c;
+
+  font-size: 15px;
+}
+
+
+.research-focus strong {
+  color: #273b50;
+
+  font-weight: 600;
+}
+
+
+
+/* ==================================
+   INTRODUCTION
+================================== */
+
+.hero-description {
+  max-width: 700px;
+
+  margin: 17px 0 0;
+
+  color: #56616c;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+}
+
+
+
+/* ==================================
    BUTTONS
------------------------------- */
+================================== */
 
 .hero-buttons {
   display: flex;
+
   flex-wrap: wrap;
 
-  gap: 14px;
+  gap: 12px;
 
-  margin-top: 34px;
+  margin-top: 31px;
 }
+
 
 .button {
   display: inline-block;
 
-  padding: 12px 21px;
+  padding: 11px 19px;
 
   border-radius: 6px;
 
   text-decoration: none;
 
-  font-size: 15px;
+  font-size: 14px;
+
   font-weight: 600;
 
   transition:
     transform 0.2s ease,
-    background 0.2s ease;
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
+
 
 .button:hover {
   transform: translateY(-2px);
 }
 
+
 .primary-button {
   background: #1769aa;
-  color: white;
+
+  color: #ffffff;
+
+  border: 1px solid #1769aa;
 }
+
 
 .primary-button:hover {
   background: #12578f;
+
+  border-color: #12578f;
 }
 
-.secondary-button {
-  color: #1769aa;
 
-  background: white;
+.secondary-button {
+  background: #ffffff;
+
+  color: #1769aa;
 
   border: 1px solid #cbd6df;
 }
 
+
 .secondary-button:hover {
   background: #f5f8fa;
+
+  border-color: #b5c9d8;
 }
 
 
-/* ------------------------------
-   RESEARCH KEYWORDS
------------------------------- */
+
+/* ==================================
+   RESEARCH INTEREST TAGS
+================================== */
 
 .research-tags {
-  margin-top: 29px;
-
   display: flex;
+
   flex-wrap: wrap;
 
-  gap: 10px;
+  gap: 9px;
+
+  margin-top: 27px;
 }
 
+
 .research-tags span {
-  padding: 6px 12px;
+  padding: 6px 11px;
 
   background: #f2f6f9;
 
   border-radius: 20px;
 
-  font-size: 13px;
   color: #455665;
+
+  font-size: 13px;
 }
 
 
-/* ------------------------------
+
+/* ==================================
    PROFILE PHOTO
------------------------------- */
+================================== */
 
 .hero-image-wrapper {
   display: flex;
+
   justify-content: center;
 }
 
+
 .profile-image {
   width: 100%;
-  max-width: 330px;
+
+  max-width: 325px;
 
   aspect-ratio: 4 / 5;
 
@@ -247,34 +389,156 @@ body {
   border-radius: 12px;
 
   box-shadow:
-    0 18px 45px rgba(32, 48, 64, 0.14);
+    0 18px 45px
+    rgba(32, 48, 64, 0.14);
 }
 
 
-/* ------------------------------
+
+/* ==================================
+   PHD OPPORTUNITY
+================================== */
+
+.opportunity-section {
+  padding: 5px 0 75px;
+}
+
+
+.opportunity-card {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 35px;
+
+  padding: 25px 30px;
+
+  background: #f4f8fb;
+
+  border: 1px solid #e2ebf2;
+
+  border-radius: 12px;
+}
+
+
+.opportunity-content {
+  max-width: 800px;
+}
+
+
+.opportunity-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 9px;
+
+  color: #1769aa;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+.opportunity-dot {
+  width: 8px;
+
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #1769aa;
+}
+
+
+.opportunity-text {
+  margin: 0;
+
+  color: #596773;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+.opportunity-text strong {
+  color: #24384d;
+
+  font-weight: 700;
+}
+
+
+.opportunity-button {
+  flex-shrink: 0;
+
+  padding: 10px 17px;
+
+  background: #ffffff;
+
+  border: 1px solid #cbd6df;
+
+  border-radius: 6px;
+
+  color: #1769aa;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.opportunity-button:hover {
+  background: #edf4f9;
+
+  transform: translateY(-2px);
+}
+
+
+
+/* ==================================
    GENERAL SECTIONS
------------------------------- */
+================================== */
 
 .section {
-  padding: 95px 0;
+  padding: 90px 0;
 
   border-top: 1px solid #eef1f3;
 }
 
+
 .light-section {
   background: #f7f9fb;
 }
+
 
 .section-label {
   margin: 0 0 10px;
 
   color: #1769aa;
 
-  font-size: 13px;
+  font-size: 12px;
+
   font-weight: 700;
 
   letter-spacing: 1.5px;
 }
+
 
 .section-title {
   margin: 0;
@@ -282,8 +546,10 @@ body {
   color: #162f4d;
 
   font-size: 34px;
+
   line-height: 1.25;
 }
+
 
 .section-intro {
   max-width: 720px;
@@ -293,25 +559,29 @@ body {
   color: #5d6873;
 
   font-size: 17px;
+
   line-height: 1.75;
 }
 
 
-/* ------------------------------
+
+/* ==================================
    FOOTER
------------------------------- */
+================================== */
 
 footer {
-  border-top: 1px solid #e7ebef;
-
   padding: 30px 0;
+
+  border-top: 1px solid #e7ebef;
 }
+
 
 .footer-content {
   display: flex;
 
-  justify-content: space-between;
   align-items: center;
+
+  justify-content: space-between;
 
   gap: 20px;
 
@@ -320,11 +590,13 @@ footer {
   font-size: 14px;
 }
 
+
 .footer-links {
   display: flex;
 
   gap: 20px;
 }
+
 
 .footer-links a {
   color: #52616e;
@@ -332,14 +604,16 @@ footer {
   text-decoration: none;
 }
 
+
 .footer-links a:hover {
   color: #1769aa;
 }
 
 
-/* ------------------------------
+
+/* ==================================
    MOBILE
------------------------------- */
+================================== */
 
 @media (max-width: 760px) {
 
@@ -347,9 +621,11 @@ footer {
     min-height: 65px;
   }
 
+
   .nav-links {
-    gap: 15px;
+    gap: 14px;
   }
+
 
   .nav-links a {
     font-size: 13px;
@@ -357,22 +633,26 @@ footer {
 
 
   .hero {
-    padding: 65px 0 75px;
+    padding: 55px 0 55px;
   }
+
 
   .hero-grid {
     grid-template-columns: 1fr;
 
-    gap: 45px;
+    gap: 40px;
   }
+
 
   .hero-image-wrapper {
     order: -1;
   }
 
+
   .profile-image {
-    max-width: 250px;
+    max-width: 245px;
   }
+
 
   .hero h1 {
     font-size: 48px;
@@ -380,12 +660,40 @@ footer {
     letter-spacing: -1px;
   }
 
-  .hero h2 {
-    font-size: 26px;
+
+  .role {
+    font-size: 20px;
   }
 
+
+  .institution {
+    font-size: 16px;
+  }
+
+
   .hero-description {
-    font-size: 17px;
+    font-size: 16px;
+  }
+
+
+  .lab-affiliation {
+    align-items: flex-start;
+  }
+
+
+  .opportunity-section {
+    padding-bottom: 55px;
+  }
+
+
+  .opportunity-card {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 23px;
   }
 
 
@@ -398,123 +706,6 @@ footer {
     flex-direction: column;
 
     align-items: flex-start;
-  }
-
-}
-
-/* ------------------------------
-   PHD OPPORTUNITY
------------------------------- */
-
-.opportunity-section {
-  padding: 0 0 75px;
-}
-
-.opportunity-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 35px;
-
-  padding: 27px 32px;
-
-  background: #f4f8fb;
-
-  border: 1px solid #e3ebf1;
-  border-radius: 12px;
-}
-
-.opportunity-content {
-  max-width: 760px;
-}
-
-.opportunity-status {
-  display: flex;
-  align-items: center;
-
-  gap: 9px;
-
-  margin-bottom: 10px;
-
-  color: #1769aa;
-
-  font-size: 12px;
-  font-weight: 700;
-
-  letter-spacing: 1.5px;
-}
-
-.opportunity-dot {
-  width: 8px;
-  height: 8px;
-
-  border-radius: 50%;
-
-  background: #1769aa;
-}
-
-.opportunity-text {
-  margin: 0;
-
-  color: #56616c;
-
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.opportunity-text strong {
-  color: #24384d;
-  font-weight: 700;
-}
-
-.opportunity-button {
-  flex-shrink: 0;
-
-  padding: 10px 17px;
-
-  border: 1px solid #cbd6df;
-  border-radius: 6px;
-
-  background: #ffffff;
-
-  color: #1769aa;
-
-  text-decoration: none;
-
-  font-size: 14px;
-  font-weight: 600;
-
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.opportunity-button:hover {
-  background: #edf4f9;
-
-  border-color: #b8cbd9;
-
-  transform: translateY(-2px);
-}
-
-
-/* Mobile */
-
-@media (max-width: 760px) {
-
-  .opportunity-section {
-    padding-bottom: 55px;
-  }
-
-  .opportunity-card {
-    flex-direction: column;
-    align-items: flex-start;
-
-    gap: 20px;
-
-    padding: 24px;
   }
 
 }
