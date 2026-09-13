@@ -372,7 +372,9 @@ body {
 
 .hero-image-wrapper {
   display: flex;
+  flex-direction: column;
 
+  align-items: center;
   justify-content: center;
 }
 
@@ -393,7 +395,61 @@ body {
     rgba(32, 48, 64, 0.14);
 }
 
+/* ==================================
+   PROFILE ICONS
+================================== */
 
+.profile-icons {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 22px;
+}
+
+
+.profile-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #d8e1e8;
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.profile-icon img {
+  width: 19px;
+  height: 19px;
+
+  object-fit: contain;
+}
+
+
+.profile-icon:hover {
+  transform: translateY(-3px);
+
+  border-color: #b5c9d8;
+
+  box-shadow:
+    0 6px 16px rgba(32, 48, 64, 0.12);
+}
 
 /* ==================================
    PHD OPPORTUNITY
