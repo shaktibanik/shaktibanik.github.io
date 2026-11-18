@@ -1785,28 +1785,95 @@ body {
 
 
 /* ==================================
-   TEACHING & SERVICE
+   TEACHING & SERVICE CARDS
 ================================== */
 
 .teaching-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 24px;
 
-  margin-top: 38px;
+  margin-top: 32px;
 }
 
 
 .teaching-card {
-  padding: 28px;
+  overflow: hidden;
 
   background: #ffffff;
 
-  border: 1px solid #e2e9ef;
+  border: 1px solid #e1e8ee;
   border-radius: 12px;
+}
+
+
+/* ==================================
+   SHARED IMAGE AREA
+================================== */
+
+.teaching-card-media {
+  position: relative;
+
+  width: 100%;
+  height: 240px;
+
+  overflow: hidden;
+
+  background: #f3f6f8;
+}
+
+
+/* Static image */
+
+.teaching-static-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* ==================================
+   TEACHING SLIDESHOW
+================================== */
+
+.teaching-slideshow {
+  position: relative;
+}
+
+
+.teaching-slide {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0;
+
+  transition: opacity 1.4s ease-in-out;
+}
+
+
+.teaching-slide.active {
+  opacity: 1;
+}
+
+
+/* ==================================
+   CARD CONTENT
+================================== */
+
+.teaching-card-body {
+  padding: 24px;
 }
 
 
@@ -1825,147 +1892,61 @@ body {
 
 
 .teaching-card h3 {
-  margin: 0 0 7px;
+  margin: 0 0 8px;
 
   color: #162f4d;
 
-  font-size: 22px;
+  font-size: 20px;
 }
 
 
 .teaching-meta {
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 
-  color: #7a8690;
+  color: #71808d;
 
   font-size: 13px;
 }
 
 
-.teaching-card p {
+.teaching-card-body p {
   color: #596773;
 
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.65;
 }
 
 
 .service-highlight {
-  margin-top: 12px;
+  margin-top: 10px;
 
-  padding: 10px 12px;
+  padding: 9px 11px;
 
-  background: #f4f8fb;
+  background: #f3f6f8;
 
-  border-radius: 7px;
+  border-radius: 5px;
 
-  color: #465969;
+  color: #536474;
 
-  font-size: 13px;
+  font-size: 12px;
 }
+
 
 /* ==================================
-   BUETPS SCROLL REVEAL CARD
+   MOBILE
 ================================== */
 
-.buetps-card {
-  position: relative;
+@media (max-width: 760px) {
 
-  overflow: hidden;
-
-  min-height: 360px;
-
-  --buetps-reveal: 0;
-}
+  .teaching-grid {
+    grid-template-columns: 1fr;
+  }
 
 
-/* Normal card underneath */
+  .teaching-card-media {
+    height: 260px;
+  }
 
-.buetps-card-content {
-  position: relative;
-
-  z-index: 1;
-}
-
-
-/* Photo layer */
-
-.buetps-cover {
-  position: absolute;
-
-  inset: 0;
-
-  z-index: 5;
-
-  display: flex;
-  flex-direction: column;
-
-  background: #ffffff;
-
-  transform:
-    translateY(
-      calc(var(--buetps-reveal) * -80%)
-    );
-
-  transition:
-    transform 0.08s linear;
-
-  pointer-events: none;
-
-  box-shadow:
-    0 4px 18px rgba(32, 48, 64, 0.08);
-}
-
-
-/* Photo */
-
-.buetps-cover-image {
-  flex: 1;
-
-  min-height: 0;
-
-  overflow: hidden;
-}
-
-
-.buetps-cover-image img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-
-  object-position: center 35%;
-}
-
-
-/* Minimal information below photo */
-
-.buetps-cover-title {
-  padding: 18px 22px;
-
-  background: #ffffff;
-
-  border-top: 1px solid #e5eaee;
-}
-
-
-.buetps-cover-title h3 {
-  margin: 0 0 3px;
-
-  color: #162f4d;
-
-  font-size: 21px;
-}
-
-
-.buetps-cover-title p {
-  margin: 0;
-
-  color: #697680;
-
-  font-size: 14px;
 }
 
 
